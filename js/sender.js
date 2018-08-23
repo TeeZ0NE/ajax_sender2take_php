@@ -23,7 +23,8 @@ $('form').on('submit', function (e) {
 		ticketid: ticketid
 	};
 	data = "&" + $.param(data);
-	console.info(data);
+	/* or if need other fields on the form */
+	// $(this).serialize() + $.param(data)
 	$.ajax({
 		crossDomain: true,
 		url: action_url,
@@ -37,4 +38,4 @@ $('form').on('submit', function (e) {
 	});
 	//TODO:: uncomment me 4 sending form
 	// $(this).parent().submit();*/
-})
+});
