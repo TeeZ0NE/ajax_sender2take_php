@@ -11,6 +11,7 @@ error_reporting(E_ALL);
 //print_r($_SERVER['REQUEST_METHOD']);
 header('Pragma: no-cache');
 header('Content-type: text/plain');
+header('Access-Control-Allow-Origin: *');
 $service = $_REQUEST['service'];
 if ($service)unset($_REQUEST['service']);
 $obj = $_REQUEST;
