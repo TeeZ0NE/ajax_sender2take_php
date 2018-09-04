@@ -28,7 +28,7 @@ $(function(){
 			xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 			//xhr.setRequestHeader('Access-Control-Allow-Origin','*');
 			xhr.send(data);
-			xhr.onreadystatechange = function () { //Вызывает функцию при смене состояния.
+			xhr.onreadystatechange = function () {
 				if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
 					console.info(xhr.responseText);
 				}
