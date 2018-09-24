@@ -1,5 +1,6 @@
 <?php
 namespace App\Support;
+use App\Support\Exceptions\MyExceptions;
 use IteratorAggregate, ArrayIterator;
  class Collection implements IteratorAggregate{
 protected $items=[];
@@ -32,4 +33,10 @@ protected $items=[];
 	 {
 		 return json_encode($this->items);
 }
+
+	 public function testExc($boolka)
+	 {
+		 if(!$boolka)
+			    throw new MyExceptions;
+	 }
  }

@@ -23,22 +23,11 @@ class UserTest extends  TestCase{
 		return 'Petro';
 	}
 
-	public function testName(){
-		$this->assertTrue(true);
-		return 'Billy';
-	}
-
-	public function testLastName()
-	{
-		$this->assertTrue(true);
-		return 'Petro';
-	}
-
 	/**
 	 * @depends testName
 	 * @depends testLastName
 	 */
-	public function testGetFullName($name, $last)
+	public function tstGetFullName($name, $last)
 	{
 		$this->user = new \App\Models\User;
 		$this->user->setFirstName('Billy');
@@ -72,8 +61,8 @@ class UserTest extends  TestCase{
 	public function tsimpleTrue(){
 		$this->assertTrue(true);
 	}
-	public static function setUpBeforeClass()
+	/*public static function setUpBeforeClass()
 	{
 		fwrite(STDOUT, __METHOD__ . "\n");
-	}
+	}*/
 }
